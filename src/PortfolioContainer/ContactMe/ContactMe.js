@@ -100,7 +100,7 @@ const submitForm = async (e) =>{
                     <h4>Send Your Email Here!</h4>
                     <img src={imgBack} alt='image not found'/>
                 </div>
-                <form onSubmit={submitForm}>
+                <form name="contact" method="POST" data-netlify="true">
                     <p>{banner}</p>
                     <label htmlFor='name'>Name</label>
                     <input type='text'
