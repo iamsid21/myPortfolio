@@ -94,7 +94,8 @@
 .resume-screen-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: ; */
+  justify-content:space-evenly;
   height: 360px;
   width: 100%;
 }
@@ -134,7 +135,6 @@
   font-size: 14px;
   font-family: "Poppins SemiBold";
   color: var(--black);
-  margin: 10px 0 0 0;
 }
 
 .resume-heading-description {
@@ -158,11 +158,13 @@
 }
 
 .programming-skills-container {
+  padding: 10px 0px ;
+  height: 400px ;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
 }
 
 .skill-percentage {
@@ -183,6 +185,9 @@
   font-family: "Poppins Bold";
   font-size: 16px;
   color: #ff5823;
+}
+.resume-screen-container {
+  height: 400px ;
 }
 
 /* IPAD PRO RESPONSIVENESS */
@@ -230,5 +235,20 @@
 
   .selected-bullet {
     width: 100%;
+  }
+  .resume-screen-container {
+    height: 400px ;
+  }
+  .projects .resume-main-heading span{
+    font-size: 14px ;
+  }
+  .projects .resume-main-heading .heading-date{
+    font-size: 8px ;
+  }
+  .projects .resume-sub-heading span{
+    font-size: 12px ;
+  }
+  .projects .resume-heading-description span{
+    font-size: 10px ;
   }
 }

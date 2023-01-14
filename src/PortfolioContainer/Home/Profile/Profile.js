@@ -39,7 +39,7 @@ function Profile() {
                     <div className='profile-details-role'>
                     <span className='primary-text'>
                             {" "}
-                            <h1 class="typing">I'am a Full Stack Developer 💻</h1>
+                            <h1 className="typing">I'am a Full Stack Developer 💻</h1>
                             <span className='profile-role-tagline'>
                                 I can build scalable Front-end and Back-end <br /> applications across diverse platforms.
                             </span>

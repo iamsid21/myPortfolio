@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+// @flow
+
+import React, { useState} from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./Resume.css";
-import index from "react-typical";
+// import index from "react-typical";
 
 export default function Resume(props){
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
@@ -14,10 +16,10 @@ export default function Resume(props){
 
     Animations.animations.fadeInScreen(props.id);
   };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   /* REUSABLE MINOR COMPONENTS */
+
   const ResumeHeading = (props) => {
     return (
       <div className="resume-heading">
@@ -61,7 +63,6 @@ export default function Resume(props){
             { skill: "C++", ratingPercentage: 95 },
             { skill: "CSS", ratingPercentage: 100 },
             { skill: "React Native", ratingPercentage: 30 },
-            { skill: "Python", ratingPercentage: 30 },
           ];
         
           const projectsDetails = [
@@ -107,34 +108,35 @@ export default function Resume(props){
         
             /* WORK EXPERIENCE */
             <div className="resume-screen-container" key="work-experience">
-              <div className="experience-container">
+              {/* <div className="experience-container"> */}
                 <ResumeHeading
                   heading={"Full Stack Developer Trainee"}
                   subHeading={"Walkover"}
-                  fromDate={"Nov, 2021"}
-                  toDate={"Dec, 2021"}
+                  fromDate={"2021"}
+                  toDate={"2021"}
+                  description = {"This training included the skills which are required by a web developer for effectively writing, and summarizing the code, It also included the deployment of the project to the cloud platforms. Skills Learned: Git/GitHub, Front End Development, Database Management, Server Side Management, Object Oriented Programming, Cloud Deployment."}
                 />
-                <div className="experience-description">
+                {/* <div className="experience-description">
                   <span className="resume-description-text">
-                    This training included the skills which are required by a web developer for effectively writing, and summarizing the code, It also included the deployment of the project to the cloud platforms. <br/>
-                    <strong>Skills Learned:</strong> Git/GitHub, Front End Development, Database Management, Server Side Management, Object Oriented Programming, Cloud Deployment. 
+                    
                   </span>
                 </div>
-                <br />
+                <br /> */}
                 <ResumeHeading
                   heading={"Martian Internship Program"}
                   subHeading={"Persistent"}
-                  fromDate={"May, 2022"}
-                  toDate={"June, 2022"}
+                  fromDate={"2022"}
+                  toDate={"2022"}
+                  description = {"This training included the skills which are required by a web developer for effectively writing, and summarizing the code, It also included the deployment of the project to the cloud platforms. Skills Learned: Git/GitHub, Front End Development, Database Management, Server Side Management, Object Oriented Programming, Cloud Deployment."}
                 />
-                <div className="experience-description">
+                {/* <div className="experience-description">
                   <span className="resume-description-text">
                   It is a program that helps students become industry- ready by making them learn one of the most essential and advanced subjects to become versatile web developer <br/>
                   <strong>Skills Learned:</strong> Operating Systems, Database Management System, C++, Computer Networks, Data Structures and Algorithms.
 
                   </span>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
             </div>,
         
             /* PROGRAMMING SKILLS */
@@ -157,7 +159,7 @@ export default function Resume(props){
             </div>,
         
             /* PROJECTS */
-            <div className="resume-screen-container" key="projects">
+            <div className="resume-screen-container projects" key="projects">
               {projectsDetails.map((projectsDetails, index) => (
                 <ResumeHeading
                   key={index}
@@ -171,7 +173,7 @@ export default function Resume(props){
             </div>,
         
             /* Interests */
-            <div className="resume-screen-container" key="interests">
+            <div className="resume-screen-container interests" key="interests">
               <ResumeHeading
                 heading="Competitive Programming"
                 // description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
@@ -197,7 +199,7 @@ export default function Resume(props){
           ];
         
           const handleCarousal = (index) => {
-            let offsetHeight = 360;
+            let offsetHeight = 400   ;
         
             let newCarousalOffset = {
               style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
@@ -218,7 +220,7 @@ export default function Resume(props){
                 <img
                   className="bullet-logo"
                   src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
-                 
+                  alt = ""
                 />
                 <span className="bullet-label">{bullet.label}</span>
               </div>
@@ -234,12 +236,37 @@ export default function Resume(props){
               </div>
             );
           };
+      //   function getHeight() {
+            
+      //     var divElement = document.getElementById("#educationdiv")
+      
+      //     // var elemHeight = divElement.offsetHeight;
+      
+      //     console.log(elemHeight) ;
+        
+      // }
+    //   function getHeight() {
+              
+    //     const divElement = document.getElementById("educationdiv") ; 
+  
+    //     let elemHeight = divElement.offsetHeight;
+  
+    //     document.querySelector(".output").textContent
+    //             = elemHeight + "px";
+    // }
     return(
       <div
       className="resume-container screen-container fade-in"
       id={props.id || ""}
     >
-      <div className="resume-content">
+      {/* <button onClick={getHeight()}>
+      Clickkkkk
+      </button>
+      <p>
+        Height of the div: 
+        <span class="output"></span>
+      </p> */}
+      {/* <div className="resume-content"> */}
         <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
         <div className="resume-card">
           <div className="resume-bullets">
@@ -251,7 +278,7 @@ export default function Resume(props){
 
           <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 };
