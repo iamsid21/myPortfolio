@@ -144,7 +144,7 @@
 
 .heading-date {
   background-color: #ff5823;
-  padding: 4px 12px;
+  padding: 4px 5px;
   font-size: 14px;
   border-radius: 14px;
   color: var(--white);
@@ -239,16 +239,27 @@
   .resume-screen-container {
     height: 400px ;
   }
-  .projects .resume-main-heading span{
-    font-size: 14px ;
-  }
   .projects .resume-main-heading .heading-date{
     font-size: 8px ;
   }
+  /* Heading sub heading font size */
+  .projects .resume-main-heading span{
+    font-size: 14px ;
+  }
   .projects .resume-sub-heading span{
-    font-size: 12px ;
+    font-size: 13px ;
   }
   .projects .resume-heading-description span{
-    font-size: 10px ;
+    font-size: 12px ;
   }
+
+  .resume-screen-container.projects {
+    display: flex;
+    justify-content: center;
+  }
+
+  .resume-screen-container.workhis {
+    justify-content: center;
+    display: flex;
+}
 }

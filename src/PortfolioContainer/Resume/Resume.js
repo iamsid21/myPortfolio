@@ -107,7 +107,7 @@ export default function Resume(props){
             </div>,
         
             /* WORK EXPERIENCE */
-            <div className="resume-screen-container" key="work-experience">
+            <div className="resume-screen-container workhis" key="work-experience">
               {/* <div className="experience-container"> */}
                 <ResumeHeading
                   heading={"Full Stack Developer Trainee"}
