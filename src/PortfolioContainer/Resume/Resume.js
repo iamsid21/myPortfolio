@@ -199,10 +199,10 @@ export default function Resume(props){
           ];
         
           const handleCarousal = (index) => {
-            let offsetHeight = 400   ;
+            let offsetHeight = 40   ;
         
             let newCarousalOffset = {
-              style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
+              style: { transform: "translateY(" + index * offsetHeight * -1 + "rem)" },
             };
         
             setCarousalOffsetStyle(newCarousalOffset);

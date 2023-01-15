@@ -1,43 +1,48 @@
+html{
+  font-size: 62.5% ;
+}
+
 .resume-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   min-height: fit-content;
-  margin: 120px 0;
+  margin: 12rem 0;
 }
 
 .resume-card {
   display: flex;
-  height: 360px;
-  width: 1000px;
-  /* margin: 80px 0; */
+  height: 36rem;
+  width: 100rem;
+  /* margin: 80rem 0; */
 }
 
 .resume-bullets {
-  box-shadow: 15px 0 9px -15px #1f2235;
+  box-shadow: 1.5rem 0 .9rem -1.5rem #1f2235;
   height: 100%;
-  width: 320px;
+  width: 32rem;
 }
 
 .resume-bullet-details {
   flex-grow: 1;
-  width: 600px;
+  width: 60rem;
   overflow: hidden;
-  padding: 0 0 0 80px;
+  padding: 0 0 0 8rem;
 }
 
 .experience-description {
-  margin: 10px 0 0 0;
+  margin: 1rem 0 0 0;
   text-align: justify;
 }
 
 .resume-description-text {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 .resume-details-carousal {
   transition: transform 1s ease-out;
+
 }
 
 .bullet-container {
@@ -59,27 +64,27 @@
   align-items: center;
   cursor: pointer;
   background-color: #1f2235;
-  height: 40px;
-  margin: 15px 0;
-  padding: 0 8px;
-  border-radius: 20px;
-  width: 30px;
+  height: 4rem;
+  margin: 1.5rem 0;
+  padding: 0 .8rem;
+  border-radius: 2rem;
+  width: 3rem;
   transition: width 0.6s ease;
 }
 
 .bullet-label {
-  font-size: 14px;
+  font-size: 1.4rem;
   white-space: nowrap;
   font-family: "Poppins SemiBold";
 }
 
 .bullet-logo {
-  height: 16px;
-  margin: 0 30px 0 0;
+  height: 1.6rem;
+  margin: 0 3rem 0 0;
 }
 
 .bullet-icons {
-  width: 34px;
+  width: 3.4rem;
   height: 100%;
   z-index: 1;
   background-color: #1f2235;
@@ -96,7 +101,7 @@
   flex-direction: column;
   /* justify-content: ; */
   justify-content:space-evenly;
-  height: 360px;
+  /* height: 36rem; */
   width: 100%;
 }
 
@@ -113,7 +118,7 @@
 
 .resume-main-heading span {
   color: var(--dark-orange);
-  font-size: 16px;
+  font-size: 1.6rem;
   font-family: "Poppins SemiBold";
 }
 
@@ -123,30 +128,30 @@
 
 .heading-bullet {
   position: absolute;
-  left: -30px;
-  height: 15px;
-  width: 15px;
-  top: 5px;
+  left: -3rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  top: .5rem;
   border-radius: 50%;
   background-color: #ff5823;
 }
 
 .resume-sub-heading {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-family: "Poppins SemiBold";
   color: var(--black);
 }
 
 .resume-heading-description {
-  font-size: 12px;
+  font-size: 1.2rem;
   text-align: justify;
 }
 
 .heading-date {
   background-color: #ff5823;
-  padding: 4px 5px;
-  font-size: 14px;
-  border-radius: 14px;
+  padding: .4rem .5rem;
+  font-size: 1.4rem;
+  border-radius: 1.4rem;
   color: var(--white);
 }
 
@@ -158,8 +163,8 @@
 }
 
 .programming-skills-container {
-  padding: 10px 0px ;
-  height: 400px ;
+  padding: 1rem 0rem ;
+  height: 40rem ;
   display: flex;
   flex-direction: row;
   /* align-items: center; */
@@ -169,13 +174,13 @@
 
 .skill-percentage {
   position: relative;
-  height: 15px;
+  height: 1.5rem;
   width: 70%;
   background-color: #ff5823;
 }
 
 .skill-percentage .active-percentage-bar {
-  height: 15px;
+  height: 1.5rem;
   transition: 0.8s ease;
   position: absolute;
   background-color: #1f2235;
@@ -183,26 +188,32 @@
 
 .skill-parent span {
   font-family: "Poppins Bold";
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #ff5823;
 }
 .resume-screen-container {
-  height: 400px ;
+  height: 40rem ;
 }
 
 /* IPAD PRO RESPONSIVENESS */
 @media only screen and (max-width: 1110px) {
+  html{
+    font-size: 60%;
+  }
   .resume-card {
-    width: 880px;
+    width: 88rem;
   }
 
   .resume-bullet-details {
-    padding: 0 0 0 70px;
+    padding: 0 0 0 7rem;
   }
 }
 
-/* IPAD RESPONSIVENESS */
 @media only screen and (max-width: 1023px) {
+  html{
+    font-size: 55%;
+  }
+
   .resume-content {
     display: flex;
     flex-direction: column;
@@ -217,41 +228,93 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
+    margin: 3rem 0;
     align-items: center;
     width: 90%;
   }
 
   .resume-bullet-details {
-    height: 360px;
+    height: 36rem;
     padding: 0;
     width: fit-content;
   }
 
   .resume-bullets {
-    margin: 30px 0;
+    margin: 3rem 0;
     width: 100%;
   }
 
   .selected-bullet {
     width: 100%;
   }
-  .resume-screen-container {
-    height: 400px ;
+
+  .resume-screen-container.projects {
+    display: flex;
+    justify-content: center;
   }
-  .projects .resume-main-heading .heading-date{
-    font-size: 8px ;
+
+  .resume-screen-container.workhis {
+    justify-content: center;
+    display: flex;
+}
+
+}
+
+/* IPAD RESPONSIVENESS */
+@media only screen and (max-width: 600px) {
+  html{
+    font-size: 50%;
   }
+
+  .resume-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bullets {
+    width: 90%;
+  }
+
+  .resume-card {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    align-items: center;
+    width: 90%;
+  }
+
+  .resume-bullet-details {
+    height: 36rem;
+    padding: 0;
+    width: fit-content;
+  }
+
+  .resume-bullets {
+    margin: 3rem 0;
+    width: 100%;
+  }
+
+  .selected-bullet {
+    width: 100%;
+  }
+  /* .resume-screen-container {
+    height: 40rem ;
+  } */
+  /* .projects .resume-main-heading .heading-date{
+    font-size: .8rem ;
+  } */
   /* Heading sub heading font size */
-  .projects .resume-main-heading span{
-    font-size: 14px ;
+  /* .projects .resume-main-heading span{
+    font-size: 1.4rem ;
   }
   .projects .resume-sub-heading span{
-    font-size: 13px ;
+    font-size: 1.3rem ;
   }
   .projects .resume-heading-description span{
-    font-size: 12px ;
-  }
+    font-size: 1.2rem ;
+  } */
 
   .resume-screen-container.projects {
     display: flex;
