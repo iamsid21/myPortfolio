@@ -1,18 +1,22 @@
+html {
+font-size: 62.5% ;
+}
+
 .about-me-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0 0 0;
+  margin: .5rem 0 0 0;
 }
 .about-me-parent {
-  max-width: 1000px;
+  max-width: 100rem;
   width: 70%;
 }
 .about-me-card {
   display: flex;
   width: 100%;
-  box-shadow: 0 0px 20px -2px #1f2235;
+  box-shadow: 0 0rem 2rem -.2rem #1f2235;
 }
 .about-me-profile {
   width: 50%;
@@ -24,38 +28,39 @@
 .about-me-details {
   width: 48%;
   text-align: justify;
-  padding: 30px;
+  padding: 3rem;
 }
 .about-me-description {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .about-me-highlights {
-  margin: 80px 0;
+  margin: 8rem 0;
 }
 .highlght-heading {
   font-family: "Poppins Bold";
-  font-size: 14px;
-  margin: 0 0 5px 0;
+  font-size: 1.4rem;
+  margin: 0 0 .5rem 0;
 }
 .highlight {
   display: flex;
   align-items: center;
-  margin: 5px 0;
-  font-size: 12px;
+  margin: .5rem 0;
+  font-size: 1.2rem;
 }
 .highlight-blob {
-  height: 12px;
-  width: 12px;
-  margin: 0 10px 0 0;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin: 0 1rem 0 0;
   background-color: #ff5823;
   border-radius: 50%;
 }
 .about-me-options .highlighted-btn {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 3rem;
 }
 
 /*IPAD PRO RESPONSIVENESS*/
 @media only screen and (max-width: 1110px) {
+
   .about-me-parent {
     width: 88%;
   }
@@ -69,12 +74,16 @@
   }
 }
 @media only screen and (max-width: 466px) {
+  html {
+    font-size: 50%;
+  }
+
   .about-me-options {
     display: flex;
     flex-direction: column;
   }
   .about-me-options .highlighted-btn {
-    margin: 24px 0 0 0 !important;
+    margin: 2.4rem 0 0 0 !important;
   }
   .about-me-options button {
     width: 100%;
