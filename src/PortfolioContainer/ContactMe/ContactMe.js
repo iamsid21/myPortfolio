@@ -33,35 +33,54 @@ const handleEmail = (e) =>{
 const handleMessage = (e) =>{
     setMessage(e.target.value)
 }
-const submitForm = async (e) =>{
-    e.preventDefault();
-    // try {
-    //     let data ={
-    //         name, 
-    //         email,
-    //         message,
-    //     };
-    //     setBool(true)
-    //     const res = await axios.post(`/contact`, data);
-    //     if(name.length === 0 || email.length === 0 || message.length === 0){
-    //         setBanner(res.data.msg)
-    //         toast.error(res.data.msg)
-    //         setBool(false)
-    //     }else if(res.status === 200){
-    //         setBanner(res.data.msg)
-    //         toast.success(res.data.msg)
-    //         setBool(false)
+// const submitForm = async (e) =>{
+//     e.preventDefault();
+//     // try {
+//     //     let data ={
+//     //         name, 
+//     //         email,
+//     //         message,
+//     //     };
+//     //     setBool(true)
+//     //     const res = await axios.post(`/contact`, data);
+//     //     if(name.length === 0 || email.length === 0 || message.length === 0){
+//     //         setBanner(res.data.msg)
+//     //         toast.error(res.data.msg)
+//     //         setBool(false)
+//     //     }else if(res.status === 200){
+//     //         setBanner(res.data.msg)
+//     //         toast.success(res.data.msg)
+//     //         setBool(false)
 
-    //         setName("")
-    //         setEmail("")
-    //         setMessage("")
+//     //         setName("")
+//     //         setEmail("")
+//     //         setMessage("")
 
-    //     }
-    // } catch (error) {
-    //     console.log(error)
-    // }
-    console.log('Hello')
+//     //     }
+//     // } catch (error) {
+//     //     console.log(error)
+//     // }
+//     console.log('Hello')
+// };
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+  
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
 };
+
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+
     return(
         <div className="main-container fade-in" id={props.id || ""}>
             <ScreenHeading
@@ -100,7 +119,7 @@ const submitForm = async (e) =>{
                     <h4>Send Your Email Here!</h4>
                     <img src={imgBack} alt='image not found'/>
                 </div>
-                <form name="contact" method="POST" data-netlify="true">
+                <form>
                     <p>{banner}</p>
                     <label htmlFor='name'>Name</label>
                     <input type='text'
